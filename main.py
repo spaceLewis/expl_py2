@@ -1,42 +1,42 @@
-# PythonPrograms.txt
-# anne.dawson@gmail.com
+# examples of Python 2.7 codes to migrate to Python >= 3
+
+"""
+This script contains a collection of Python programs and examples, primarily written for educational purposes. 
+The programs demonstrate various Python concepts, including input/output, arithmetic operations, control structures, 
+functions, loops, file handling, lists, strings, and recursion.
+Key Features:
+- Basic input/output operations using `raw_input` (Python 2.7) and `print` statements.
+- Arithmetic operations and type conversions.
+- Control structures: `if`, `elif`, `else`, and nested conditions.
+- Looping constructs: `while` and `for` loops, including nested loops.
+- Examples of using `break` and `continue` in loops.
+- Functions: defining, calling, and importing functions from external modules.
+- File handling: reading from and writing to files.
+- Working with lists: indexing, slicing, appending, and list methods.
+- String operations: concatenation, slicing, formatting, and escape sequences.
+- Recursive functions and sorting algorithms (e.g., bubble sort).
+- Demonstration of Boolean expressions and De Morgan's Laws.
+Python 2.7 vs Python >= 3 Differences:
+- `raw_input` is used for input in Python 2.7, while `input` is used in Python >= 3.
+- Print statements in Python 2.7 use `print` without parentheses, whereas Python >= 3 requires parentheses (e.g., `print("Hello World!")`).
+- The `<>` operator for inequality in Python 2.7 is replaced with `!=` in Python >= 3.
+- Integer division in Python 2.7 truncates the result by default, while Python >= 3 requires `//` for floor division.
+- Unicode strings in Python 2.7 are prefixed with `u` (e.g., `u"string"`), while all strings in Python >= 3 are Unicode by default.
+Note:
+- The examples in this script are written in Python 2.7 syntax. To run them in Python >= 3, modifications are required to align with the updated syntax and features.
+"""
+
 # Last updated: Sunday 22nd February 2009, 16:36 PT 
-# Note to AD: update this file then copy to PythonPrograms.html
-
-# Please Note: lines starting with a # are comments 
-# and are ignored by
-# the Python interpreter...
-
-# See:
-# http://www.annedawson.net/PythonComments.txt
-# for important comments about comments.
-
-# Any of these example programs can be run by
-# directly copying the desired program and pasting 
-# the code to a Python editor such as IDLE...
-# http://www.annedawson.net/Python_Program_Run.htm
-
-# The first Python program (01-01.py) has only
-# one executable line: 
-# print "Hello World!"
-# and one comment line
-
-# A selection of these example programs are used in courses
-# CSCI100, CSCI120, CSCI165 and BUSI237
-
-
 
 #01-01.py
 
 print "Hello World!"
-
 
 #01-02.py
 
 thetext = raw_input("Enter some text ")
 print "This is what you entered:"
 print thetext
-
 
 #01-03.py
 
@@ -45,16 +45,12 @@ thetext = raw_input("Enter some text\n")
 print "This is what you entered:"
 print thetext
 
-
 #01-04.py
 
 prompt  = "Enter a some text "
 thetext = raw_input(prompt)
 print "This is what you entered:"
 print thetext
-
-
-
 
 #02-01.py
 
@@ -115,8 +111,6 @@ print 6 // 3 # floor division: always truncates fractional remainders
 print -5
 print 3**2   # three to the power of 2
 
-
-
 #03-05.py
 
 print 2.0 + 4.0
@@ -142,8 +136,6 @@ print 6 % 3.0
 print 6 // 3.0 # floor division: always truncates fractional remainders
 print -5.0
 print 3**2.0   # three to the power of 2
-
-
 
 #03-07.py
 
@@ -209,10 +201,6 @@ c = int(c)
 print c
 print type(c)
 
-
-
-
-
 # 03-13.py
 # How to round up a floating point number
 # to the nearest integer
@@ -224,22 +212,16 @@ print x
 x = int(x)
 print x
 
-
-
-
-#  File:       04-01.py 
+#  04-01.py 
 #  Purpose:    Creating a string object
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Monday 27th September 2004, 12:43 PT
 
 number1 = raw_input("Enter first number:\n")
 print number1, type(number1)
 
-
-#  File:       04-02.py 
+#  04-02.py 
 #  Purpose:    Converting one data type to another
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Monday 27th September 2004, 12:46 PT
 
@@ -248,11 +230,8 @@ print number1, type(number1)
 number1 = int(number1)
 print number1, type(number1)
 
-
-
-#  File:       04-03.py 
+#  04-03.py 
 #  Purpose:    Displaying an object's memory location 
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Monday 27th September 2004, 12:48 PT
 
@@ -261,14 +240,8 @@ print number1, type(number1), id(number1)
 number1 = int(number1)
 print number1, type(number1), id(number1)
 
-
-
-
-
-
-#  File:       04-04.py 
+#  04-04.py 
 #  Purpose:    Examples of use of arithmetic operators
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Monday 27th September 2004, 13:09 PT
 
@@ -281,15 +254,8 @@ print 6 // 3 # floor (integer) division: always truncates fractional remainders
 print -5
 print 3**2   # three to the power of 2
 
-
-
-
-
-
-
-#  File:       04-05.py 
+#  04-05.py 
 #  Purpose:    Examples of use of arithmetic operators with float values
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Monday 27th September 2004, 13:10 PT
 
@@ -302,19 +268,10 @@ print 6.0 // 3.0 # floor (integer) division: always truncates fractional remaind
 print -5.0
 print 3.0**2.0   # three to the power of 2
 
-
-
-
-
-
-
-
-#  File:       04-06.py 
+#  04-06.py 
 #  Purpose:    Examples of use of arithmetic operators 
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Monday 27th September 2004, 13:10 PT
-
 # mixing data types in expressions
 # mixed type expressions are "converted up"
 # converted up means to take the data type with the greater storage
@@ -329,17 +286,8 @@ print 6 // 3.0 # floor division: always truncates fractional remainders
 print -5.0
 print 3**2.0   # three to the power of 2
 
-
-
-
-
-
-
-
-
-#  File:       04-07.py 
+#  04-07.py 
 #  Purpose:    Examples of use of Boolean expressions
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Monday 27th September 2004, 13:12 PT
 #  these are Boolean expressions which result in a value of
@@ -356,14 +304,8 @@ print 4 >= 4
 print 4 != 4
 print 4 <> 4
 
-
-
-
-
-
-#  File:       04-08.py 
+#  04-08.py 
 #  Purpose:    Displaying boolean values
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Monday 27th September 2004, 12:54 PT
 
@@ -371,17 +313,8 @@ number = 10
 isPositive = (number > 0)
 print isPositive
 
-
-
-
-
-
-
-
-
-#  File:       04-09.py 
+#  04-09.py 
 #  Purpose:    Combining boolean expressions with and
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Monday 27th September 2004, 13:18 PT
 
@@ -389,19 +322,10 @@ age = 25
 salary = 55000
 print (age > 21) and (salary > 50000)
 
-
-
-
-
-
-
-
-#  File:       04-10.py 
+#  04-10.py 
 #  Purpose:    The if statement
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Monday 27th September 2004, 13:23 PT
-
 #  The condition of the following if statement
 #  follows the word if, and ends with a colon (:)
 #  In this example, if x has a value equal to 'spam',
@@ -420,25 +344,16 @@ else:
 # Try removing the tab spaces and see what happens when you attempt to run.
 
 
-
-
-
-
-
-
-#  File:       04-11.py 
+#  04-11.py 
 #  Purpose:    The if statement with multiple statements
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Monday 27th September 2004, 13:23 PT
-
 #  The condition of the following if statement
 #  follows the word if, and ends with a colon (:)
 #  In this example, if x has a value equal to 'spam',
 #  then 'Hi spam\n' will be printed followed by
 #  "Nice weather we're having"
 #  followed by 'Have a nice day!'
-
 
 x = 'spam'
 if x == 'spam':
@@ -448,28 +363,10 @@ if x == 'spam':
 else:
     print 'not spam'
 
-# Notice the indentation (spacing out) of this code.
-# The statement(s) following the if condition (i.e. boolean expression)
-# must be indented to the next tab stop. This means you must press
-# the Tab button before typing the word print.
-# Try removing the tab spaces and see what happens when you attempt to run.
-
-
-
-
-
-
-
-
-
-
-
-#  File:       04-12.py 
+#  04-12.py 
 #  Purpose:    The if statement with multiple statements
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Monday 27th September 2004, 13:23 PT
-
 #  The condition of the following if statement
 #  follows the word if, and ends with a colon (:)
 #  In this example, if x has a value equal to 'spammy',
@@ -486,25 +383,8 @@ else:
     print 'not spam'
     print 'Not having a good day?'
 
-# Notice the indentation (spacing out) of this code.
-# The statement(s) following the if condition (i.e. boolean expression)
-# must be indented to the next tab stop. This means you must press
-# the Tab button before typing the word print.
-# Try removing the tab spaces and see what happens when you attempt to run.
-
-
-
-
-
-
-
-
-
-
-
 #  Program:    04-13.py
 #  Purpose:    A nested if example (an if statement within another if statement)
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Monday 4th October 2004, 13:21 PT
 
@@ -519,20 +399,8 @@ else:
 	grade = 'C'
 print "\n\nGrade is: " + grade
 
-
-
-
-
-
-
-
-
-
-
-
 #  Program:    04-14.py
 #  Purpose:    A nested if example - using if/else
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Monday 4th October 2004, 13:25 PT
 
@@ -553,18 +421,8 @@ else:
                  grade = 'Fail'
 print "\n\nGrade is: " + grade
 
-
-
-
-
-
-
-
-
-
 #  Program:    04-15.py
 #  Purpose:    A nested if example - using if/elif/else
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Monday 4th October 2004, 13:28 PT
 
@@ -582,16 +440,10 @@ else:
     grade = 'Fail'
 print "\n\nGrade is: " + grade
 
-
-
-
-
-
-#  File:       04-16.py
+#  04-16.py
 #  Purpose:    Demo of DeMorgan's Laws:
 #  1.  a Not And is equivalent to an Or with two negated inputs
 #  2.  a Not Or is equivalent to an And with two negated inputs
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Monday 21st March 2005, 05:53 PT
 #  Test data: 0 0, 0 1, 1 0, 1 1
@@ -608,15 +460,8 @@ y = int(raw_input("Enter a value for y: "))
 print (not(x < 15 and y >= 3))
 print (x >= 15 or y < 3)
 
-
-
-
-
-
-
 #  Program:    04-17.py
 #  Purpose:    Decision using two conditions linked with an and or an or
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Tuesday 20th February 2007, 11:20 PT
 
@@ -650,28 +495,14 @@ if (salary > 50000) or (age > 21):
 else:
     print "you need to be earning more than 50000 OR be over 21 (or both) to join our club"
     
-
-
-
-
-
-
-
-
-
-
-
-#  File:       05-01.py 
+#  05-01.py 
 #  Purpose:    Examples of while loops
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Thursday 30th September 2004, 15:51 PT
-
 #  You must remember to indent the statements to be repeated.
 #  They must be repeated to the same level.
 #  Use the Tab key to indent. The space bar can be used but
 #  its easier (less typing) to use the space bar
-
 #  Used like this, the while loop is said to be
 #  'counter-controlled'. In this program, x is acting as a counter.
 
@@ -681,22 +512,12 @@ while x < 5:
     x = x + 1
 print 'done'
 
-
-
-
-
-
-
-
-#  File:       05-02.py 
+#  05-02.py 
 #  Purpose:    Examples of while loops
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Thursday 30th September 2004, 15:51 PT
-
 #  Used like this, the while loop is said to be
 #  'counter-controlled'. In this program, x is acting as a counter.
-
 #  You may repeat one statement or multiple statements.
 
 x = 1
@@ -707,19 +528,10 @@ while x < 5:
 print 'done'
 print 'gone'
 
-
-
-
-
-
-
-
-#  File:       05-03.py 
+#  05-03.py 
 #  Purpose:    Examples of while loops - the infinite loop
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Thursday 30th September 2004, 15:51 PT
-
 #  An infinite loop.
 #  Remember that 1 (or any value other than 0) represents true.
 #  Press Ctrl-C to interupt this program run.
@@ -734,19 +546,10 @@ while x:
 print 'done'
 print 'gone'
 
-
-
-
-
-
-
-
-#  File:       05-04.py 
+#  05-04.py 
 #  Purpose:    Examples of while loops - another infinite loop
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Thursday 30th September 2004, 16:00 PT
-
 #  An infinite loop.
 #  Remember that 1 (or any value other than 0) represents true.
 #  Press Ctrl-C to interupt this program run.
@@ -759,20 +562,10 @@ while 1:
 print 'done'
 print 'gone'
 
-
-
-
-
-
-
-
-
-#  File:       05-05.py 
+#  05-05.py 
 #  Purpose:    Example: use of break to end an infinite loop
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Thursday 30th September 2004, 16:02 PT
-
 
 while 1:
     print 'Spam'
@@ -783,20 +576,10 @@ while 1:
 print 'Have a '
 print 'nice day!'
 
-
-
-
-
-
-
-
-
-#  File:       05-06.py 
+#  05-06.py 
 #  Purpose:    Example: use of continue in a loop
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Thursday 30th September 2004, 16:07 PT
-
 
 while 1:
     print 'Spam'
@@ -810,22 +593,11 @@ while 1:
 print 'Have a '
 print 'nice day!'
 
-
-
-
-
-
-
-
-
-
-#  File:       05-07.py 
+#  05-07.py 
 #  Purpose:    Example: 'sentinel-controlled' while loop
 #              Calculates average score of a class
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Tuesday 5th October 2004, 6:31 PT
-
 
 # initialization phase
 totalScore = 0     # sum of scores
@@ -848,60 +620,27 @@ if numberScores != 0: # division by zero would be a run-time error
 else:
    print "No scores were entered"
 
-
-
-
-
-
-
-
-
-
-
-#  File:       05-08.py 
+#  05-08.py 
 #  Purpose:    Example: the counter-controlled for loop
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Tuesday 5th October 2004, 6:53 PT
 
 for c in range (10):  
     print c
 
-
 # Note: range (10) is 0 through 9
 
-
-
-
-
-
-
-
-
-#  File:       05-09.py 
+#  05-09.py 
 #  Purpose:    Example: the counter-controlled for loop
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Tuesday 5th October 2004, 6:58 PT
 
 for c in range (5,10):  
     print c
 
-
 # Note: range (5,10) is 5 through 9
-
-
-
-
-
-
-
-
-
-
-#  File:       05-10.py 
+#  05-10.py 
 #  Purpose:    Example: 'continue' with the for loop
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Tuesday 5th October 2004, 6:58 PT
 
@@ -910,18 +649,8 @@ for c in range (1,6):
         continue
     print c
 
-
-
-
-
-
-
-
-
-
-#  File:       05-11.py 
+#  05-11.py 
 #  Purpose:    Example: 'break' with the for loop
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Tuesday 5th October 2004, 7:05 PT
 
@@ -930,45 +659,22 @@ for c in range (1,6):
         break
     print c
 
-    
-
-
-
-
-
-
-
-#  File:       05-12.py 
+#  05-12.py 
 #  Purpose:    Example: outputting strings and numbers
 #              in a single print statement
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Tuesday 5th October 2004, 7:21 PT
-
 
 d = 10
 c = 75
 print 'Total is: ', d, 'dollars and', c, ' cents'
 
-
-
-
-
-
-
-
-
-
-
-
-#  File:       05-13.py 
+#  05-13.py 
 #  Purpose:    Example: outputting strings and numbers
 #              in a single print statement
 #              using string formatting.
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Tuesday 5th October 2004, 7:35 PT
-
 
 x = 20
 y = 75
@@ -981,19 +687,10 @@ x = 20.512
 y = 15.269
 print 'The sum of %0.2f and %0.2f is %0.2f' % (x, y, x + y)
 
-
-
-
-
-
-
-
-#  File:       05-14.py 
+#  05-14.py 
 #  Purpose:    Example: how to repeat a program at the user's request
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Thursday 19th October 2006, 7:58 PT
-
 
 print "This is the start of the program"
 answer = 'y'
@@ -1003,17 +700,11 @@ while (answer == 'y' or answer == 'Y'):
     answer = raw_input("Do you want to run this program again? y/n")
 print "Goodbye!"
 
-
-
-
-#  File:       05-15.py 
+#  05-15.py 
 #  Purpose:    Example: how to use a loop within a loop
 #              a nested while loop
-
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Wednesday 27th June 2007, 9:08 PT
-
 
 print "This is the start of the program"
 
@@ -1034,20 +725,11 @@ Notice that with a loop repeating 5 times,
 means that you can control 25 processes.
 '''
 
-
-
-
-
-
-        
-#  File:       05-16.py 
+#  05-16.py 
 #  Purpose:    Example: how to use a loop within a loop
 #              a nested while loop
-
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Wednesday 27th June 2007, 9:44 PT
-
 
 print "This is the start of the program"
 
@@ -1072,21 +754,12 @@ Notice that with a loop repeating 5 times,
 ***within*** a loop that repeats 5 times
 means that you can control 125 processes.
 '''
-        
 
-
-
-
-
-
-#  File:       05-17.py 
+#  05-17.py 
 #  Purpose:    Example: how to use a loop within a loop
 #              a nested for loop
-
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Wednesday 27th June 2007, 9:45 PT
-
 
 print "This is the start of the program"
 
@@ -1099,18 +772,10 @@ Notice that with a loop repeating 5 times,
 ***within*** a loop that repeats 5 times
 means that you can control 25 processes.
 '''
-        
 
-
-
-
-
-
-#  File:       05-18.py 
+#  05-18.py 
 #  Purpose:    Example: how to use a loop within a loop
 #              a nested for loop
-
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Wednesday 27th June 2007, 9:45 PT
 
@@ -1128,21 +793,12 @@ Notice that with a loop repeating 5 times,
 ***within*** a loop that repeats 5 times
 means that you can control 125 processes.
 '''
-        
 
-
-
-
-
-
-
-
-#  File:       06-01.py 
+#  06-01.py 
 #  Purpose:    Example: using the built-in square root function math.sqrt
 #              To use any math function, you have to include the statement:
 #              import math
 #              in your program - usually at the top, but can be anywhere.
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Friday 6th October 2006, 8:54 PT
 
@@ -1152,16 +808,9 @@ print math.sqrt(16.5)
 x = 144
 print math.sqrt(x)
 
-
-
-
-
-
-
-#  File:       06-02.py 
+#  06-02.py 
 #  Purpose:    Example: using the dir function to list out the names
 #              of available functions in the math module
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Monday 11th October 2004, 7:59 PT
 
@@ -1169,14 +818,8 @@ import math
 print math
 print dir(math)
 
-
-
-
-
-
-#  File:       06-03.py 
+#  06-03.py 
 #  Purpose:    Example: using a programmer-defined function
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Monday 11th October 2004, 8:19 PT
 
@@ -1192,15 +835,8 @@ for x in range(1,6):
 # the last value of x is 5 
 print "last value of x is:",x
 
-
-
-
-
-
-
-#  File:       06-04.py 
+#  06-04.py 
 #  Purpose:    Example: using two programmer-defined functions
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Monday 11th October 2004, 8:45 PT
 
@@ -1220,11 +856,8 @@ print "1 to 5 doubled"
 for x in range(1,6):    
     print doubleIt(x),
 
-
-
-#  File:       myFunctions.py 
+#  myFunctions.py 
 #  Purpose:    two programmer-defined functions
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Monday 11th October 2004, 8:57 PT
 
@@ -1234,16 +867,11 @@ def cube( y ):
 def doubleIt ( z ):
  return 2 * z
 
-
-
-
-#  File:       06-05.py 
+#  06-05.py 
 #  Purpose:    Example: importing programmer-defined functions
 #              from its own module file
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Monday 11th October 2004, 8:56 PT
-
 #  IMPORTANT:  myFunctions.py should be in the same folder as this file
 
 import myFunctions
@@ -1257,19 +885,9 @@ print
 print "1 to 5 doubled"    
 for x in range(1,6):    
     print myFunctions.doubleIt(x),
-
-
-
-
-
-
-
-
-
-
-#  File:       06-06.py 
+    
+#  06-06.py 
 #  Purpose:    Example: function with no return statement
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Tuesday 12th October 2004, 6:30 PT
 
@@ -1283,16 +901,8 @@ times(1)
 print "This is the 2 times tables:"
 times(2)
 
-
-
-
-
-
-
-
-#  File:       06-07.py 
+#  06-07.py 
 #  Purpose:    Example: a function with two return statements
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Tuesday 12th October 2004, 6:37 PT
 
@@ -1312,15 +922,8 @@ print " 5.0 / 0  returns:"
 result = division( 5.0 , 0 )
 print result
 
-
-
-
-
-
-
-#  File:       06-08.py 
+#  06-08.py 
 #  Purpose:    Example: a function with no arguments
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Tuesday 12th October 2004, 7:18 PT
 
@@ -1331,15 +934,8 @@ greeting()
 greeting()
 greeting()
 
-
-
-
-
-
-
-#  File:       06-09.py 
+#  06-09.py 
 #  Purpose:    Example: a program with a Boolean function
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Tuesday 12th October 2004, 7:21 PT
 
@@ -1353,17 +949,9 @@ x = float(raw_input("Enter a positive or negative number: "))
 result = isPositive(x)
 print result
 print isPositive(x)
-          
 
-
-
-
-
-
-
-#  File:       06-10.py 
+#  06-10.py 
 #  Purpose:    Example: a polymorphic function
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Tuesday 12th October 2004, 7:34 PT
 
@@ -1386,38 +974,10 @@ print doubleIt(z)
 # An overloaded operator behaves differently depending on
 # the type of its operands.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#  File:       06-11.py 
+#  06-11.py 
 #  Purpose:    Demonstrates the use of Python functions
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
-#  Date:       Sunday 29th October 2006, 12:48 PT                                                                    
-                                                                     
-                                                                     
+#  Date:       Sunday 29th October 2006, 12:48 PT                                                               
                                              
 '''
     Thanks to HW for the idea behind this program.
@@ -1442,8 +1002,6 @@ print doubleIt(z)
     followed by the line:
     print "Testing this program"
 '''
-
-
 
 def pause():
     raw_input("\n\nPress any key to continue...\n\n")
@@ -1470,9 +1028,7 @@ def blank_Line():
 def clearScreen():
     for i in range(1,26):
         blank_Line()
-
-
-
+        
 startMessage()
 clearScreen()
 print "Testing this program"
@@ -1486,31 +1042,8 @@ pause()
 clearScreen()
 quitMessage()
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#  File:       07-01.py 
+#  07-01.py 
 #  Purpose:    Example: creating and using a Python list
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Monday 25th October 2004, 8:02 PT
 
@@ -1529,18 +1062,8 @@ print result[5]
 print result[6]
 print result[7]
 
-
-
-
-
-
-
-
-
-
-#  File:       07-02.py 
+#  07-02.py 
 #  Purpose:    Example: creating and printing an empty list
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Monday 25th October 2004, 8:15 PT
 
@@ -1550,21 +1073,8 @@ print list1
 # the following statement would generate an error
 #print list1[0]
 
-
-
-
-
-
-
-
-
-
-
-
-
-#  File:       07-03.py 
+#  07-03.py 
 #  Purpose:    Example: appending to an empty list
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Monday 25th October 2004, 8:17 PT
 
@@ -1579,18 +1089,8 @@ print list1[1]
 # the following statement would generate an out-of-range error
 #print list1[2]
 
-
-
-
-
-
-
-
-
-
-#  File:       07-04.py 
+#  07-04.py 
 #  Purpose:    Example: a list of lists
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Monday 25th October 2004, 8:22 PT
 
@@ -1603,16 +1103,8 @@ print list3
 print list3[0]
 print list3[1]
 
-
-
-
-
-
-
-
-#  File:       07-05.py 
+#  07-05.py 
 #  Purpose:    Example: accessing the last item in a list
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Monday 25th October 2004, 8:27 PT
 
@@ -1623,14 +1115,8 @@ print list1[1]
 print list1[-1]
 print list1[-2]
 
-
-
-
-
-
-#  File:       07-06.py 
+#  07-06.py 
 #  Purpose:    Example: deleting items from a list
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Monday 25th October 2004, 8:28 PT
 
@@ -1640,13 +1126,8 @@ del list1[0]
 del list1[-1]
 print list1
 
-
-
-
-
-#  File:       07-07.py 
+#  07-07.py 
 #  Purpose:    Example: repeating lists
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Thursday 4th November 2004, 6:37 PT
 
@@ -1657,17 +1138,8 @@ print list1
 list1 = list1 * 2
 print list1
 
-
-
-
-
-
-
-
-
-#  File:       07-08.py 
+#  07-08.py 
 #  Purpose:    Example: concatenating lists
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Thursday 4th November 2004, 6:55 PT
 
@@ -1680,46 +1152,24 @@ print list1
 list1 = list1 + list1
 print list1
 
-
-
-
-
-
-
-#  File:       07-09.py 
+#  07-09.py 
 #  Purpose:    Example: ist indexing
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Thursday 4th November 2004, 7:07 PT
 
 list1 = ["Anne", "Dawson", 666]
 print list1[0], list1[2]
 
-
-
-
-
-
-
-#  File:       07-10.py 
+#  07-10.py 
 #  Purpose:    Example: list indexing
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Thursday 4th November 2004, 7:08 PT
 
 list1 = [2,4,6,8,10,12,14,16,18,20] 
 print list1[0:1],list1[5:7]
 
-
-
-
-
-
-
-
-#  File:       07-11.py 
+#  07-11.py 
 #  Purpose:    Example: finding the length of a list 
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Thursday 4th November 2004, 7:20 PT
 
@@ -1730,17 +1180,8 @@ print len(list1),
 print len(list2),
 print len(list3)
 
-
-
-
-
-
-
-
-
-#  File:       07-12.py 
+#  07-12.py 
 #  Purpose:    Example: list iteration
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Thursday 4th November 2004, 7:26 PT
 
@@ -1748,33 +1189,16 @@ list = [1,2,3,"Spam",4,5]
 for i in list:
     print i,
 
-
-
-
-
-
-
-
-
-
-#  File:       07-13.py 
+#  07-13.py 
 #  Purpose:    Example: list membership
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Thursday 4th November 2004, 7:28 PT
 
 list = [1,2,3,"Spam",4,5] 
 print "Spam" in list
 
-
-
-
-
-
-
-#  File:       07-14.py 
+#  07-14.py 
 #  Purpose:    Example: a selection of list methods
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Thursday 4th November 2004, 7:42 PT
 
@@ -1795,14 +1219,8 @@ print list
 list.reverse() # reverses the order of the items in the list
 print list  
 
-
-
-
-
-
-#  File:       07-15.py 
+#  07-15.py 
 #  Purpose:    Example: a 2D list
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A
 #  Date:       Sunday 4th November 2007, 12:15 PT
 
@@ -1831,17 +1249,8 @@ print tictactoe[0]
 print tictactoe[1]
 print tictactoe[2]
 
-
-
-
-
-
-
-
-
-#  File:       08-01.py 
+#  08-01.py 
 #  Purpose:    Example: strings
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Saturday 30th October 2004, 16:14 PT
 
@@ -1855,15 +1264,9 @@ print '''Anne was here
      on Saturday 
      30th October 2004'''
 
-
-
-
-
-
-#  File:       08-02.py 
+#  08-02.py 
 #  Purpose:    Example: using an apostrophe within a string
 #              and using double quote marks within a string
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Saturday 30th October 2004, 16:14 PT
 
@@ -1874,16 +1277,9 @@ print "This is Anne's spam and these are Jake's eggs"
 
 print 'Here is a double quote ", and "more"'
 
-
-
-
-
-
-
-#  File:       08-03.py 
+#  08-03.py 
 #  Purpose:    Example: multiplying numbers and
 #                       multiplying strings
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Saturday 30th October 2004, 16:38 PT
 
@@ -1892,48 +1288,23 @@ print 30 * 4
 print "3" * 4
 print "30" * 4
 
-
-
-
-
-
-
-#  File:       08-04.py 
+#  08-04.py 
 #  Purpose:    Example: string concatenation
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Saturday 30th October 2004, 16:51 PT
 
 print "Anne " + "was " + ("here " * 3)
 
-
-
-
-
-
-
-
-
-
-#  File:       08-05.py 
+#  08-05.py 
 #  Purpose:    Example: string indexing
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Monday 1st November 2004, 7:01 PT
 
 s1 = "Anne Dawson" 
 print s1[0],s1[5]
 
-
-
-
-
-
-
-
-#  File:       08-06.py 
+#  08-06.py 
 #  Purpose:    Example: string slicing
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Monday 1st November 2004, 7:07 PT
 
@@ -1941,21 +1312,10 @@ s1 = "Anne Dawson"
 print s1[0:1],s1[5:7]
 print s1[6:9]
 
-
-
-
-
-
-
-
-
-
-#  File:       08-07.py 
+#  08-07.py 
 #  Purpose:    Example: finding the length of a string
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Monday 1st November 2004, 7:10 PT
-
 
 s1 = "Anne" 
 s2 = "Dawson"
@@ -1964,34 +1324,15 @@ print len(s1),
 print len(s2),
 print len(s3)
 
-
-
-
-
-
-
-
-
-
-#  File:       08-08.py 
+#  08-08.py 
 #  Purpose:    Example: the %s string formatting code
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Monday 1st November 2004, 8:00 PT
 
-
 print 'Python is a %s language.' % 'great'
 
-
-
-
-
-
-
-
-#  File:       08-09.py 
+#  08-09.py 
 #  Purpose:    Example: finding a string within a string
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Monday 1st November 2004, 8:11 PT
 
@@ -2000,18 +1341,10 @@ s1 = 'spamandeggs'
 x = s1.find('and')
 print x
 
-
-
-
-
-
-
-#  File:       08-10.py 
+#  08-10.py 
 #  Purpose:    Example: finding a string within a string
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Monday 1st November 2004, 8:34 PT
-
 
 s1 = 'spam and eggs'
 s1.replace('and','without')
@@ -2021,54 +1354,27 @@ print s1
 s2 = s1.replace('and','without')
 print s2
 
-
-
-
-
-
-
-
-#  File:       08-11.py 
+#  08-11.py 
 #  Purpose:    Example: escape sequences within a string 
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Tuesday 2nd November 2004, 8:29 PT
-
 
 s = 'one\ntwo\tthree'
 print s
 
-
-
-
-
-
-
-#  File:       08-12.py 
+#  08-12.py 
 #  Purpose:    Example: an escape sequence counts as one character
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Tuesday 2nd November 2004, 8:31 PT
-
 
 s = 'one\ntwo\tthree'
 print s
 print len(s)
 
-
-
-
-
-
-
-
-
-#  File:       08-13.py 
+#  08-13.py 
 #  Purpose:    Example: iteration and membership with strings
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Wednesday 3rd November 2004, 7:35 PT
-
 
 s = 'Anne was here'
 for c in s:
@@ -2076,13 +1382,6 @@ for c in s:
 print 'w' in s,
 print ' ' in s,
 print 'x' in s
-
-
-
-
-
-
-
 
 # 08-14.py
 # Anne Dawson
@@ -2118,16 +1417,8 @@ print str1
 str1 = u'\u2588\u2588\u2588\u2588\u0020\u0020\u0020\u0020\u2588\u2588\u2588\u2588'
 print str1
 
-
-
-
-
-
-
-
-#  File:       09-01.py 
+#  09-01.py 
 #  Purpose:    Example: a program which uses a file
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Thursday 4th November 2004, 8:37 PT
 
@@ -2136,19 +1427,8 @@ file1 = open('C:\\temp\\file1.txt','r')
 string = file1.readline()
 print string
 
-
-
-
-
-
-
-
-
-
-
-#  File:       09-02.py 
+#  09-02.py 
 #  Purpose:    Example: a program which uses a file
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Monday 7th March 2005, 10:38 PT
 
@@ -2158,18 +1438,8 @@ file1.write("Today is Monday\n")
 file1.write("Tomorrow is Tuesday")
 file1.close()
 
-
-
-
-
-
-
-
-
-
-#  File:       09-03.py 
+#  09-03.py 
 #  Purpose:    Example: a program which uses a file
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Monday 7th March 2005, 10:56 PT
 
@@ -2187,22 +1457,8 @@ string1 = file2.read(5)
 print string1
 file2.close()
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-#  File:       09-04.py 
+#  09-04.py 
 #  Purpose:    Example: a program which uses a file
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Monday 7th March 2005, 11:31 PT
 
@@ -2222,20 +1478,8 @@ filecopy = "C:\\temp\\tester2copy.txt" #this file will be created
 fileold = "C:\\temp\\tester2.txt" # existing file
 copyFile(fileold, filecopy)
 
-
-
-
-
-
-
-
-
-
-
-
-#  File:       09-05.py 
+#  09-05.py 
 #  Purpose:    Example: a program which uses a file
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Monday 7th March 2005, 11:31 PT
 
@@ -2245,30 +1489,10 @@ try:
 except: 
   print 'There is no file named', filename 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#  File:       10-01.py 
+#  10-01.py 
 #  Purpose:    Example: sequential search of a list
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Thursday 11th November 2004, 14:05 PT
-
 
 list1 = [11,27,36,44,51,22,65,1,78]
 numbertofind = int(raw_input("Enter a number\n"))
@@ -2280,22 +1504,8 @@ for i in list1:
 if found == 0:
     print "Number not found"
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-#  File:       10-02.py 
+#  10-02.py 
 #  Purpose:    Example: sequential search of a list
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Wednesday 19th November 2008, 11:37 PT
 
@@ -2321,21 +1531,9 @@ if found == True:
 else:
     print str(search) + " not found"
 
-        
-
-
-
-
-
-
-
-
-
-
-#  File:       bubblesort.py 
+#  bubblesort.py 
 #  Purpose:    Example: a program which demonstrates a bubble sort on
 #              a list of 10 random integers
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Sunday 14th November 2004, 9:17 PT
 
@@ -2365,19 +1563,8 @@ print "Before:", numbers
 sort(numbers)
 print "After :", numbers
 
-
-
-
-
-
-
-
-
-
-
-#  File:       12-01.py 
+#  12-01.py 
 #  Purpose:    Example: a recursive function
-#  Programmer: Anne Dawson
 #  Course:     CSCI120A, CSCI165
 #  Date:       Thursday 11th November 2004, 14:25 PT
 
@@ -2394,55 +1581,3 @@ print result
 print " 4! has a value of:",
 result = factorial(4)
 print result
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
